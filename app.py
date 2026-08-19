@@ -19,7 +19,7 @@ if uploaded_file is not None:
     col1, col2 = st.columns(2)
     with col1:
         st.subheader("原始照片")
-        st.image(image, use_container_width=True)
+        st.image(image)
     
     # 點擊按鈕開始去背
     if st.button("開始一鍵去背 🚀", type="primary"):
@@ -30,7 +30,7 @@ if uploaded_file is not None:
             
         with col2:
             st.subheader("去背成果")
-            st.image(output_image, use_container_width=True)
+            st.image(output_image)
             
         # 準備下載按鈕
         buffered = io.BytesIO()
